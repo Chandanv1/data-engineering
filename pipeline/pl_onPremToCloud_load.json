@@ -23,7 +23,11 @@
 					},
 					"dataset": {
 						"referenceName": "ds_SqlServerTable1",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"Schema": "1",
+							"TableName": "1"
+						}
 					},
 					"firstRowOnly": false
 				}
@@ -91,11 +95,11 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"Schema": {
-											"value": "@item().TableSchema",
+											"value": "@item().TABLE_SCHEMA",
 											"type": "Expression"
 										},
 										"TableName": {
-											"value": "@item().TableName",
+											"value": "@item().TABLE_NAME",
 											"type": "Expression"
 										}
 									}
